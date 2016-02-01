@@ -117,8 +117,9 @@ class LinkedList{
 		
 		ListNode result = null;
 		
+		//Add nodes in front of result list
 		while(curr1 != null && curr2 != null){
-			if(curr1.data <= curr2.data){
+			if(curr1.data <= curr2.data){		//V.v.imp logic to add Node in front
 				ListNode temp = curr1.next;
 				curr1.next = result;
 				result = curr1;

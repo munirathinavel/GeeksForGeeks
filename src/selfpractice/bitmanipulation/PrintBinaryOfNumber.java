@@ -1,4 +1,4 @@
-package selfpractice;
+package selfpractice.bitmanipulation;
 
 public class PrintBinaryOfNumber {
 

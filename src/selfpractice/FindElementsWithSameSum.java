@@ -4,7 +4,9 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 /**
- * 2) Given an array of distinct integers, find if there are two pairs (a, b) and (c, d) such that a+b = c+d, and a, b, c and d are distinct elements. If there are multiple answers, then print any of them.
+ * 2) Given an array of distinct integers, find if there are two pairs
+  (a, b) and (c, d) such that a+b = c+d, and a, b, c and d are distinct elements. 
+  If there are multiple answers, then print any of them.
 
 Input:   {3, 4, 7, 1, 12, 9};
 Output:  (4, 12) and (7, 9)

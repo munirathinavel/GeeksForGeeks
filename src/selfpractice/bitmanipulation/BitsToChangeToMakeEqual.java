@@ -1,4 +1,4 @@
-package selfpractice;
+package selfpractice.bitmanipulation;
 /**
  * Find the minimum number of bits to change to make two numbers equal. 
  */

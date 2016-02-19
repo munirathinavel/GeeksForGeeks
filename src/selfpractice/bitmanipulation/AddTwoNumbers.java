@@ -11,12 +11,11 @@ public class AddTwoNumbers {
 		int b = 20;
 		
 		int sum1 = addIterative(a, b);
-		System.out.println(sum1);
+		System.out.println("Sum by iterative method : " + sum1);
 		
 		int sum2 = addRecursion(a,b);
-		System.out.println(sum2);
+		System.out.println("Sum by recursive method : " + sum2);
 	}
-
 	
 	private static int addIterative(int a, int b) {
 		//iterate till second no becomes 0
@@ -33,7 +32,6 @@ public class AddTwoNumbers {
 		return a;		 
 	}
 
-
 	private static int addRecursion(int a, int b) {
 		if(b == 0){
 			return a;
@@ -42,5 +40,4 @@ public class AddTwoNumbers {
 			return addRecursion(a ^ b, (a & b) << 1);
 		}		
 	}
-
 }

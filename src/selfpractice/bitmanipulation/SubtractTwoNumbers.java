@@ -10,14 +10,14 @@ arithmetic operators (+, ++, –, -, .. etc).
 public class SubtractTwoNumbers {
 
 	public static void main(String[] args) {
-		int a = 10;
-		int b = 20;
+		int a = 30;
+		int b = 10;
 		
 		int ans1 = subIterative(a, b);
-		System.out.println(ans1);
+		System.out.println("By Iterative method : "+ ans1);
 		
 		int ans2 = subRecursion(a,b);
-		System.out.println(ans2);
+		System.out.println("By Recursive method : "+ ans2);
 	}
 
 	

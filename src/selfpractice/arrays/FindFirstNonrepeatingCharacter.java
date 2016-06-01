@@ -1,4 +1,4 @@
-package selfpractice;
+package selfpractice.arrays;
 
 /**
  * Find the first non-repeating character in a String.

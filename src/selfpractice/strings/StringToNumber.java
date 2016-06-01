@@ -1,4 +1,4 @@
-package selfpractice;
+package selfpractice.strings;
 
 public class StringToNumber {
 

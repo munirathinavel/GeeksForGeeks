@@ -128,7 +128,5 @@ public class TrinaryTreeApp {
 		
 		System.out.println("\nAfter Delete:");
 		tree.print(tree.root);
-
 	}
-
 }

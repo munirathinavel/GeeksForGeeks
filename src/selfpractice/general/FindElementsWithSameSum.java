@@ -1,4 +1,4 @@
-package selfpractice;
+package selfpractice.general;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -30,28 +30,32 @@ public class FindElementsWithSameSum {
 	}
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+		/*Scanner scanner = new Scanner(System.in);
 		int noOfElements = scanner.nextInt();
 		
 		int[] arr = new int[noOfElements];
 		for(int i=0; i<noOfElements; i++){
 			arr[i] = scanner.nextInt();
-		}		
+		}*/
+		int[] arr = {3, 4, 7, 1, 12, 9};
+		
 		//print arr
 		System.out.println("Input Array :");
-		for(int i=0; i<noOfElements; i++){
+		for(int i=0; i<arr.length; i++){
 			System.out.print(arr[i] + " ");
 		}
 		
 		findElemetsWithSameSum(arr);
 		
-		scanner.close();
+		//scanner.close();
 	}
 	
 	private static void findElemetsWithSameSum(int[] arr){
 		HashMap<Integer,Pair> map = new HashMap<Integer, Pair>();
+		
 		for(int i=0; i < arr.length; i++){
 			for(int j=i+1; j < arr.length; j++){
+				
 				int sum = arr[i] + arr[j];
 				Pair pair1 = new Pair(arr[i], arr[j]);
 				if(map.containsKey(sum)){

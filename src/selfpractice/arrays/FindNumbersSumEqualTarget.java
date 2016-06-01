@@ -1,4 +1,4 @@
-package selfpractice;
+package selfpractice.arrays;
 
 import java.util.HashMap;
 import java.util.Scanner;

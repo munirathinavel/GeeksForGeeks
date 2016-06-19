@@ -18,7 +18,7 @@ for n=2
 public class AllPairsOfBalancedParenthesis {
 	private static char[] str;		
 	public static void main(String[] args) {
-		int n = 1;		
+		int n = 3;		
 		if(n > 0){
 			str = new char[n*2];
 			printBalancedParenthesis(n, 0, 0, 0);

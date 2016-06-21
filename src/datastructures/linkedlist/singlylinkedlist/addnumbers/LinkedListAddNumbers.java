@@ -1,4 +1,4 @@
-package selfpractice.linkedlist.addnumbers;
+package datastructures.linkedlist.singlylinkedlist.addnumbers;
 
 /**
  * 
@@ -11,30 +11,30 @@ Output
   
  */
 
-class ListNode {
+class Node {
 	int data;
-	ListNode next;	
-	public ListNode(int data) {
+	Node next;	
+	public Node(int data) {
 		this.data = data;
 	}
 }
 
 class LinkedList{
-	ListNode head;
+	Node head;
 	public LinkedList(){
 		head = null;	//initialize as empty list
 	}
 
 	//Create LinkedList
 	public void insertFirst(int data){
-		ListNode node = new ListNode(data);
+		Node node = new Node(data);
 		node.next = head;
 		head = node;
 	}
 
 	//Display LinkedList
 	public void displayList() {
-		ListNode current = head;
+		Node current = head;
 		while(current != null){
 			System.out.print(current.data);
 			if(current.next != null){
@@ -46,9 +46,9 @@ class LinkedList{
 
 	//Reverse Lists
 	public void reverse(){
-		ListNode current = head;
-		ListNode prev = null;
-		ListNode next = null;
+		Node current = head;
+		Node prev = null;
+		Node next = null;
 
 		while(current != null){
 			next = current.next;
@@ -60,12 +60,12 @@ class LinkedList{
 	}
 
 	//Add two lists
-	public ListNode addList(ListNode head1, ListNode head2){
-		ListNode curr1 = head1;
-		ListNode curr2 = head2;
+	public Node addList(Node head1, Node head2){
+		Node curr1 = head1;
+		Node curr2 = head2;
 
-		ListNode head = new ListNode(0);	//head of summation list
-		ListNode curr = head;				//set curr = sum head
+		Node head = new Node(0);	//head of summation list
+		Node curr = head;				//set curr = sum head
 
 		int advance = 0;
 		while(curr1 != null && curr2 != null) {
@@ -73,7 +73,7 @@ class LinkedList{
 			advance = sum / 10;
 			sum = sum % 10;
 
-			curr.next = new ListNode(sum);	//add num node to curr node
+			curr.next = new Node(sum);	//add num node to curr node
 
 			curr = curr.next;	//increment all pointers of list1, list2 and sum list
 			curr1 = curr1.next;
@@ -82,18 +82,18 @@ class LinkedList{
 
 		if(curr1 != null){			//if list1 has more numbers
 			if(advance != 0) {
-				curr.next = addList(curr1 , new ListNode(advance));
+				curr.next = addList(curr1 , new Node(advance));
 			}else{
 				curr.next = curr1;
 			}
 		}else if(curr2 != null){	//if list2 has more numbers
 			if(advance != 0) {
-				curr.next = addList(curr2 , new ListNode(advance));
+				curr.next = addList(curr2 , new Node(advance));
 			}else{
 				curr.next = curr2;
 			}
 		}else if(advance != 0){		//only carry is remaining
-			curr.next = new ListNode(advance);
+			curr.next = new Node(advance);
 		}
 
 		return head.next;

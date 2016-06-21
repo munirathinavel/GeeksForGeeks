@@ -1,7 +1,9 @@
-package selfpractice.linkedlist.mergelists;
+package datastructures.linkedlist.singlylinkedlist.mergelists;
 
 /**
- 2) Given two linked lists sorted in increasing order. Merge them such a way that the result list is in decreasing order (reverse order).
+ * http://www.geeksforgeeks.org/merge-two-sorted-linked-lists-such-that-merged-list-is-in-reverse-order/
+ *
+ Given two linked lists sorted in increasing order. Merge them such a way that the result list is in decreasing order (reverse order).
 
 Input:  a: 5->10->15->40
         b: 2->3->20 
@@ -12,55 +14,55 @@ Input:  a: NULL
 Output: res: 20->3->2
  */
 
-class ListNode {
+class Node {
 	int data;
-	ListNode next;	
-	public ListNode(int data) {
+	Node next;
+	public Node(int data) {
 		this.data = data;
 	}
 }
 
 class LinkedList{
-	ListNode head;
+	Node head;
 	public LinkedList(){
 		head = null;	//initialize as empty list
 	}
 
 	//Create LinkedList
 	public void insertFirst(int data){
-		ListNode node = new ListNode(data);
+		Node node = new Node(data);
 		node.next = head;
 		head = node;
 	}
 
 	//Display LinkedList
 	public void displayList() {
-		ListNode current = head;
-		while(current != null){
-			System.out.print(current.data);
-			if(current.next != null){
+		Node curr = head;
+		while(curr != null){
+			System.out.print(curr.data);
+			if(curr.next != null){
 				System.out.print(" -> ");
 			}
-			current = current.next;
+			curr = curr.next;
 		}
 	}
 
 	//Merge Lists
-	public ListNode mergeListsInDecreasingOrder(ListNode head1, ListNode head2){
-		ListNode curr1 = head1;
-		ListNode curr2 = head2;
-		
-		ListNode result = null;
-		
-		//Add nodes in front of result list
+	public Node mergeListsInDecreasingOrder(Node head1, Node head2){
+		Node curr1 = head1;
+		Node curr2 = head2;
+
+		Node result = null;
+
+		//Add nodes in front of result list => Thus it becomes Descending Order
 		while(curr1 != null && curr2 != null){
 			if(curr1.data <= curr2.data){		//V.v.imp logic to add Node in front
-				ListNode temp = curr1.next;
+				Node temp = curr1.next;
 				curr1.next = result;
 				result = curr1;
 				curr1 = temp;
 			}else{					
-				ListNode temp = curr2.next;
+				Node temp = curr2.next;
 				curr2.next = result;
 				result = curr2;
 				curr2 = temp;
@@ -69,14 +71,14 @@ class LinkedList{
 		
 		//Add rest from list1
 		while(curr1 != null){
-			ListNode temp = curr1.next;
+			Node temp = curr1.next;
 			curr1.next = result;
 			result = curr1;
 			curr1 = temp;
 		}
 		//Add rest from list2
 		while(curr2 != null){
-			ListNode temp = curr2.next;
+			Node temp = curr2.next;
 			curr2.next = result;
 			result = curr2;
 			curr2 = temp;

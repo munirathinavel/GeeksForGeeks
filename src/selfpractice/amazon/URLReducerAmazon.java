@@ -1,11 +1,11 @@
-package selfpractice;
+package selfpractice.amazon;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
+/** The one you implemented in Call
 Example:
 http://www.amazon.com//Playstation-System-Video-Game-Console-Pc//dp//B000K6TOK6//ref=sr_1_5?ie=UTF8&qid=1454648463&sr=8-5&keywords=playstation >> http://amzn.to//1nQW316
 
@@ -81,8 +81,4 @@ public class URLReducerAmazon {
 
 		return ""+input.charAt(index)+hashValue;            
 	}
-
-
-
-
 }

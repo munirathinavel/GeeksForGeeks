@@ -19,6 +19,9 @@ package selfpractice.amazon;
                 and the target URL in the header.
 
     So its essentially, Decimal to Base-62 conversion and vice versa problem.
+
+    With this approach we can store: 62^6 = ~56 billion unique urls
+
  */
 public class URLShortner {
 

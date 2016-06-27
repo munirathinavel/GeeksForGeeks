@@ -6,7 +6,7 @@ import java.util.*;
 public class PathFinder {
     private Stack<String> path  = new Stack<String>();   // the current path
     private Set<String> onPath  = new HashSet<String>();     // the set of vertices on the path
-    private static List<String> answer =new LinkedList<String>();
+    private static List<String> answer = new LinkedList<String>();
 
     private static final String FILEPATH = "D:\\workspace\\SandeepSadanandKulkarni\\github-projects\\GeeksForGeeks\\src\\selfpractice\\pocketgems\\question1";
 
@@ -59,7 +59,7 @@ public class PathFinder {
 
         Graph G=new Graph();
         
-        for(String sCurrentLine1:lines){
+        for(String sCurrentLine1:lines){                //Loop through all lines and create graph network
             String[] names = sCurrentLine1.split(":");
             String startNode1=names[0].trim();
             String [] endNodes=names[1].split(" ");
@@ -68,6 +68,7 @@ public class PathFinder {
             }
         }
 
+        //Find paths
         new PathFinder().enumerate(G,startNode,endNode);
 
         return answer;

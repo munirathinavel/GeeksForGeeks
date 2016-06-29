@@ -25,7 +25,6 @@ public class LongestCommonSubsequence {
 
         int length = obj.getLongestCommonSubsequence(str1.toCharArray(), str2.toCharArray());
         System.out.println("Lenght of longest common subsequence = "+ length);
-
     }
 
     private int getLongestCommonSubsequence(char[] str1, char[] str2) {

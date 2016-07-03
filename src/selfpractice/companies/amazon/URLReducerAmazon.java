@@ -1,4 +1,4 @@
-package selfpractice.amazon;
+package selfpractice.companies.amazon;
 
 import java.util.ArrayList;
 import java.util.HashMap;

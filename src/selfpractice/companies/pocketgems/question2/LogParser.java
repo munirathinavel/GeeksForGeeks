@@ -1,4 +1,4 @@
-package selfpractice.pocketgems.question2;
+package selfpractice.companies.pocketgems.question2;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

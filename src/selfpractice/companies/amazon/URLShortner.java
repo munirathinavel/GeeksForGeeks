@@ -1,4 +1,4 @@
-package selfpractice.amazon;
+package selfpractice.companies.amazon;
 
 /**
  http://www.geeksforgeeks.org/how-to-design-a-tiny-url-or-url-shortener/

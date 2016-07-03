@@ -1,4 +1,4 @@
-package selfpractice.pocketgems.question1;
+package selfpractice.companies.pocketgems.question1;
 
 import java.io.*;
 import java.util.*;

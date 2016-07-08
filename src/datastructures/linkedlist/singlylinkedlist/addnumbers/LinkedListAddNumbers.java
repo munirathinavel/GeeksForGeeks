@@ -64,8 +64,8 @@ class LinkedList{
 		Node curr1 = head1;
 		Node curr2 = head2;
 
-		Node head = new Node(0);	//head of summation list
-		Node curr = head;				//set curr = sum head
+		Node dummyHead = new Node(0);	//head of summation list
+		Node curr = dummyHead;				//set curr = sum head
 
 		int advance = 0;
 		while(curr1 != null && curr2 != null) {
@@ -96,7 +96,7 @@ class LinkedList{
 			curr.next = new Node(advance);
 		}
 
-		return head.next;
+		return dummyHead.next;
 	}
 
 }

@@ -8,16 +8,28 @@ import java.util.Arrays;
  http://www.csse.monash.edu.au/~lloyd/tildeAlgDS/Sort/Flag/
 
  Sort an array of 0s, 1s and 2s
- Given an array A[] consisting 0s, 1s and 2s, write a function that sorts A[]. The functions should put all 0s first, then all 1s and all 2s in last.
+ Given an array A[] consisting 0s, 1s and 2s, write a function that sorts A[]. The functions should put all 0s first,
+ then all 1s and all 2s in last.
 
  Example
  Input = {0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1};
  Output = {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2}
 
  Doing the same with 3 chars (r,w,b) 0=red, 1=white, 2=blue (Dutch flag colors)
+ --------------------------------------------------------------------------------------------------------------------
+Approach:
+ The unknown region is shrunk while maintaining these conditions
 
+ Lo := 1; Mid := 1; Hi := N;
+ while Mid <= Hi do
+    Invariant: a[1..Lo-1]=0 and a[Lo..Mid-1]=1 and a[Hi+1..N]=2; a[Mid..Hi] are unknown.
+      case a[Mid] in
+         0: swap a[Lo] and a[Mid]; Lo++; Mid++
+         1: Mid++
+         2: swap a[Mid] and a[Hi]; Hi–
  */
 public class SortStringWith3Chars {
+
     public static void main(String[] args) {
         SortStringWith3Chars s3 = new SortStringWith3Chars();
         String s = "wwrrrrbbbwwwbrbwwbrrbw";

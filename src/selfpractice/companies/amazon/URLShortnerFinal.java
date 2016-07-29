@@ -23,7 +23,7 @@ package selfpractice.companies.amazon;
     With this approach we can store: 62^6 = ~56 billion unique urls
 
  */
-public class URLShortner {
+public class URLShortnerFinal {
 
     private static final String ALPHABET_MAP = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     private static final int BASE = ALPHABET_MAP.length();  //62  => Thus Base-62

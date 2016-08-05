@@ -29,7 +29,7 @@ package selfpractice.companies.google;
  first digit greater than next digit = 2, so 11198, n=1
  first digit greater than next digit = 9, so 1118, n=0
 
- Note: 
+ Note: For opposite (Find largest number) find and remove first digit smaller than next one
  */
 public class BuildLowestNumber {
 

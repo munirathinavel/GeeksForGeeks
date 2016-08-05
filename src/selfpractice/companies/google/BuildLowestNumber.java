@@ -2,6 +2,8 @@ package selfpractice.companies.google;
 
 /**
  http://www.geeksforgeeks.org/build-lowest-number-by-removing-n-digits-from-a-given-number/
+ http://codercareer.blogspot.com/2013/11/no-48-least-number-after-deleting-digits.html
+
  Build Lowest Number by Removing n digits from a given number
  Given a string ‘str’ of digits and an integer ‘n’, build the lowest possible number by removing ‘n’ digits from the string
  and not changing the order of input digits.
@@ -27,6 +29,7 @@ package selfpractice.companies.google;
  first digit greater than next digit = 2, so 11198, n=1
  first digit greater than next digit = 9, so 1118, n=0
 
+ Note: 
  */
 public class BuildLowestNumber {
 

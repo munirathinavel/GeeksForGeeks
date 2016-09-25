@@ -18,7 +18,8 @@ package selfpractice.companies.google;
 
  Input: str = "121198", n = 2
  Output: "1118"
- ---------------------------------------------------------------------------------------------------------------------
+ --------------------------------------------------------------------
+ -------------------------------------------------
  Approach:
  1. Now we get the rules to delete digits to get the least remaining number:
     - If there is a digit which is greater than the next one, delete such first digit.
@@ -34,8 +35,8 @@ package selfpractice.companies.google;
 public class BuildLowestNumber {
 
     public static void main(String[] args) {
-        String input = "121198";
-        int n = 2;
+        String input = "765028321";
+        int n = 1;
 
         BuildLowestNumber obj = new BuildLowestNumber();
         String result = obj.getLowestNumber(input, n);

@@ -35,8 +35,8 @@ package selfpractice.companies.google;
 public class BuildLowestNumber {
 
     public static void main(String[] args) {
-        String input = "765028321";
-        int n = 1;
+        String input = "4325043";
+        int n = 3;
 
         BuildLowestNumber obj = new BuildLowestNumber();
         String result = obj.getLowestNumber(input, n);
@@ -57,7 +57,6 @@ public class BuildLowestNumber {
             result.deleteCharAt(removeIndex);
             n--;
         }
-
         return result.toString();
     }
 
@@ -70,7 +69,6 @@ public class BuildLowestNumber {
                 return i;
             }
         }
-
         return str.length()-1;
     }
 

@@ -1,7 +1,7 @@
 package selfpractice.companies.google;
 
 /**
- * Created by sandeepkulkarni on 9/25/16.
+ Coding round - question 1
  */
 public class AverageNumber {
 
@@ -13,7 +13,7 @@ public class AverageNumber {
     }
 
     public int solution(int X){
-        //minimum digits required
+        //minimum digits required to find average
         if(X < 10)
             return X;
 
@@ -23,14 +23,14 @@ public class AverageNumber {
             char t = (char) Math.round((in.charAt(i)+in.charAt(i-1))/2.0);
             String prefix = "";
             String suffix = "";
-            if(i > 1){
+            if(i > 1){                              //get number prefix
                 prefix = in.substring(0,i-1);
             }
-            if(i < in.length()-1){
+            if(i < in.length()-1){                  //get number suffix
                 suffix = in.substring(i+1,in.length());
             }
-            int ret = Integer.parseInt(prefix+t+suffix);
-            max = Math.max(max, ret);
+            int ret = Integer.parseInt(prefix+t+suffix);    //recreate number with prefix + avg + suffix
+            max = Math.max(max, ret);                       //track largest number
         }
         return max;
     }
